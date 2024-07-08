@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailActivity"
+    android:background="@android:color/white">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Book Details" />
+
+    <!-- Book Image -->
+    <ImageView
+        android:id="@+id/bookImage"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/book_image"
+        android:layout_margin="16dp" />
+
+    <!-- Book Title -->
+    <TextView
+        android:id="@+id/bookTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/bookImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Book Author -->
+    <TextView
+        android:id="@+id/bookAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textSize="18sp"
+        android:paddingTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/bookTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Book Genre -->
+    <TextView
+        android:id="@+id/bookGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/bookAuthor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Book Summary -->
+    <TextView
+        android:id="@+id/bookSummary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Summary"
+        android:textSize="14sp"
+        android:paddingTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/bookGenre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Book Reviews -->
+    <TextView
+        android:id="@+id/bookReviews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reviews"
+        android:textSize="14sp"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/bookSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
